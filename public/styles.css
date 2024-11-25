@@ -59,3 +59,10 @@ body {
     color: red;
     text-decoration: none;
   }
+  p.ex1 {
+    font-size: 100px;
+  }
+  
+  p.ex2{
+    border-style: solid;
+  }
