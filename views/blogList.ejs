@@ -1,0 +1,17 @@
+<h2>All Blog Posts</h2>
+
+<% if (blogs.length === 0) { %> 
+  <p>No blog posts available. <a href="/create">Create one now!</a></p>
+<% } else { %>
+  <ul>
+    <% blogs.forEach(blog => { %>
+      <li>
+        <h3><a href="/edit/<%= blog._id %>"><%= blog.title %></a></h3>
+        <p><%= blog.content.slice(0, 100) %>...</p> <!-- Display a truncated version of the content -->
+        
+        <!-- Delete button with confirmation link -->
+        <a href="/delete/<%= blog._id %>">Delete</a>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>

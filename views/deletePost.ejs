@@ -1,0 +1,10 @@
+<h2>Are you sure you want to delete this post?</h2>
+
+<p><strong><%= post.title %></strong></p>
+<p><%= post.content %></p>
+
+<form action="/delete/<%= post._id %>" method="POST">
+  <button type="submit">Yes, Delete it</button>
+</form>
+
+<a href="/">Cancel</a>
